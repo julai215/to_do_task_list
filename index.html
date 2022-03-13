@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proiect</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <template id="template">
+        <div class="task" data-index>
+            <div class="title icon"></div>
+            <button class="delete icon"></button>
+        </div>
+    </template>
+
+    <main class="container" id="container">
+        <h1>Task List</h1>
+
+        <div class="input">
+            <button class="add icon"></button>
+            <input type="search" placeholder="task" class="text">
+        </div>
+
+        <div class="task-list"></div>
+    </main>
+
+    <script src="src/template.js"></script>
+    <script src="src/data.js"></script>
+    <script src="src/app.js"></script>
+</body>
+</html>

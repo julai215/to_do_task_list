@@ -1,0 +1,142 @@
+:root {
+    --title: #3A6B7E;
+    --bg-page: #fbfbfb;
+    --bg-container: #e4e4e4;
+    --bg-item: #FFF;
+    --text: #29897e;
+    --border: 1px solid #aaa;
+    --faws: "Font Awesome 5 Free";
+}
+
+body {
+    background-color: var(--bg-page);
+}
+
+h1 {
+    color: var(--title);
+    text-align: center;
+    margin-top: 0;
+}
+
+.container {
+    width: 400px;
+    height: 70vh;
+    margin: calc(15vh - 30px) auto;
+    padding: 15px;
+    overflow: auto;
+    border-radius: 4px;
+    color: var(--text);
+    background-color: var(--bg-container);
+}
+
+.input {
+    position: relative;
+}
+
+.task-list {
+    margin: 5px 0;
+    overflow: auto;
+}
+
+
+button {
+    height: 38px;
+    width: 38px;
+    color: inherit;
+    border-radius: 0 3px 3px 0;
+    border: none;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    box-shadow: inset 0px 0px 4px #888;
+}
+
+button:focus {
+    outline: 1px solid transparent;
+}
+
+.icon::before {
+    font-family: var(--faws);
+    display: inline-block;
+    width: 25px;
+    line-height: 25px;
+}
+
+
+.text {
+    height: 40px;
+    width: 100%;
+    padding: 5px 38px 5px 5px;
+    font-size: 25px;
+    color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.text:focus {
+    outline: 1px solid transparent;
+    border: 1px solid #aaa;
+}
+
+::placeholder {
+    color: #9dc5c0;
+}
+
+.add {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+.add::before {
+    content: "\f067";
+    font-weight: 900;
+}
+
+
+.task {
+    margin: 10px 0;
+    height: 38px;
+    font-size: 25px;
+    display: flex;
+    align-items: stretch;
+    background-color: var(--bg-item);
+    border: var(--border);
+    border-radius: 4px;
+}
+
+.task:hover .delete {
+    visibility: visible;
+}
+
+.title {
+    padding: 5px 0 5px 5px;
+    flex-grow:  1;
+}
+
+.delete {
+    visibility: hidden;
+}
+
+.delete::before {
+    font-size: 20px;
+    content: "\f2ed";
+}
+
+.title::before {
+    content: "\f111";
+    margin-right: 0.25em;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.done .title::before {
+    content: "\f058";
+}
