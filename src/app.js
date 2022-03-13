@@ -226,7 +226,6 @@ class Task extends TasksList {
 
             this.addTask();
 
-
         }));
 
         // adaugare event pentru enter in input
